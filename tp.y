@@ -36,8 +36,8 @@ comando		:nova
 		|linhas
 		;
 nova		:NOVA coordenada cor { } 
-abrir		:ABRIR FICHEIRO { }
-guardar		:GUARDAR FICHEIRO { }
+abrir		:ABRIR FICHEIRO { abrirFicheiro($2,&img); }
+guardar		:GUARDAR FICHEIRO { guardarFicheiro($2,&img); }
 
 %%
 
