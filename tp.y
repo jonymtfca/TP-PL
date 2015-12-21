@@ -19,8 +19,8 @@
 
 %start s
 %% 
-s: comandos FIM	
- ;
+s		: comandos FIM	
+ 		;
 comandos	:comandos comando ';'
 		|comando ';'
 		;
