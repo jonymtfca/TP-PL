@@ -1,6 +1,18 @@
 Trabalho de Processamento de linguagens para LESI 
 
-2015/2016
+Dezembro de 2015
+
+Data de entrega : 30-12-2015
+
+Git helpers
+
+Para nao por sempre a pass
+->git config --global credential.helper cache
+->git config --global credential.helper 'cache --timeout=3600'
+
+
+
+
 
 João Rodrigues 
 Claudio Rebelo

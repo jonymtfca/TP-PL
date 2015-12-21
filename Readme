@@ -4,5 +4,31 @@ Dezembro de 2015
 
 Data de entrega : 30-12-2015
 
+Git Tutorial
+
+Para nao por sempre a pass:
+->git config --global credential.helper cache
+->git config --global credential.helper 'cache --timeout=3600'
+
+Abrir branch novo:
+->git checkout -b <nome do branch>
+Alterar coisas a vontade e depois 
+->git add .
+->git commit -m "arquivo para testes da parte2"
+->git checkout master
+->git merge <nome do branch>
+->git push origin master
+->git push origin parte2:parte2 (enviar nome do branch para github)
+
+Eliminar branch
+
+->git branch -d <nome do branch>
+
+Fazer antes de enviar para o repositorio no github
+-> git fetch origin
+
+Para enviar o que foi feito:
+->git push origin master
+
 João Rodrigues 
 Claudio Rebelo
