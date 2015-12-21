@@ -2,9 +2,7 @@
   #include <stdio.h>
   #include "mydefs.h"
 
-  /*Imagem globalImage;
-  TCOR 	 corDefeito;*/
-  
+//aaa  
 %}
 
 %union {
