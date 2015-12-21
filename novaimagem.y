@@ -10,14 +10,10 @@
 %union {
      int valor; 
      int inteiro; 
-     TCOR tcor;
-     TXY txy;
      char *texto;
 }
 
 %type <tcor>		cor
-%type <txy>		coordenada
-%type <txy>		dimensao
 %type <texto>		FICHEIRO
 %token <inteiro>	INTEIRO
 
