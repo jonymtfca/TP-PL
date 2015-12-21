@@ -1,6 +1,8 @@
 %{
   #include <stdio.h>
   #include "mydefs.h"
+
+  Imagem img;
 %}
 
 %union {
@@ -33,4 +35,19 @@ comando		:nova
 		|circunf
 		|linhas
 		;
-nova		:NOVA coordenada cor 
+nova		:NOVA coordenada cor { } 
+abrir		:ABRIR FICHEIRO { }
+guardar		:GUARDAR FICHEIRO { }
+
+%%
+
+int yyerror(char const *s) {
+	fprintf(stderr,"Upps occoreu um erro: %s\n",s);	
+	return 0;
+}
+
+int main() {
+	yyparse(); 
+	return 0;
+}
+
