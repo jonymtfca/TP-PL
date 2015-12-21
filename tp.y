@@ -1,8 +1,6 @@
 %{
   #include <stdio.h>
   #include "mydefs.h"
-
-//aaa  
 %}
 
 %union {
@@ -15,10 +13,24 @@
 %type <texto>		FICHEIRO
 %token <inteiro>	INTEIRO
 
-%token NOVA FIM PONTO LINHA LINHAS CORDEFEITO DEBUG FICHEIRO GUARDAR CIRCUNF RETFILL RETANGULO ABRIR
+%token NOVA ABRIR GUARDAR COR PONTO LINHA RETANGULO RETFILL CIRCUNF LINHAS FIM  
 
 %start s
 %% 
 s: comandos FIM	
-
- 
+ ;
+comandos	:comandos comando ';'
+		|comando ';'
+		;
+comando		:nova
+		|abrir
+		|guardar
+		|cor
+		|ponto
+		|linha
+		|retangulo
+		|retfill
+		|circunf
+		|linhas
+		;
+nova		:NOVA coordenada cor 
